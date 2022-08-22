@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    height: 100vh;
+    width: 600px;
+    display: grid;
+    grid-template-areas:
+    'box1 box2 box2'
+    'box1 box3 box3'
+    'box4 box5 box6'
+    'box4 box5 box6'
+    'box7 box7 box7'
+    'box7 box7 box7';
+    column-gap: 5px; 
+    row-gap: 10px;
+
+}
+
+box1,
+box2,
+box3,
+box4,
+box5,
+box6,
+box7 {
+    background-color: black;
+    color: white; 
+    padding: 20px;
+    border: white 1px solid; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    grid-template-columns: 2fr 3fr 3fr;
+}
+
+box1 {
+    grid-area: box1;
+    width: 250px; 
+}
+
+box2 {
+    grid-area: box2;
+    width: 350px;
+
+}
+   
+box3 {
+    grid-area: box3;
+    width: 350px; 
+
+}
+
+box4 {
+    grid-area: box4;
+    width: 100px; 
+
+
+}
+
+box5 {
+    grid-area: box5;
+    width: 395px; 
+    margin-left: -150px;
+
+}
+
+box6 {
+    grid-area: box6;
+    width: 100px;
+}
+
+box7 {
+    grid-area: box7;
+    width: 605px;
+}
+
+
+/*Initial Approach to building the grid;
+
+.box1 {
+    grid-column-start: 1;
+    grid-column-end: 2; 
+    grid-row-start: 1; 
+    grid-row-end: 3;
+    border: 10px; 
+    border-color: black;
+}
+
+.box2 {
+    grid-column-start: 2; 
+    grid-column-end: 4; 
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.box3 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2; 
+    grid-row-end: 4;
+}
+
+.box4 {
+    grid-column-start: 1; 
+    grid-column-end: 2; 
+    grid-row-start: 4; 
+    grid-row-end: 5;
+}
+
+.box5 {
+    grid-column-start: 2; 
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.box6 {
+    grid-column-start: 3; 
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.box7 {
+    grid-column-start: 1; 
+    grid-column-end: 4;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}*/
