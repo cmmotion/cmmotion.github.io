@@ -1,0 +1,152 @@
+*{
+  box-sizing: border-box;
+  background-origin: border-box;
+  margin: 0;
+}
+
+:root{
+  /* first two colours come from Kuroi's Manga Pallete Palette */
+  /* https://lospec.com/palette-list/manga-pallete */
+  --col-01:#171219;
+  --col-02:#f2fbeb;
+  --col-03:#5252ff;
+  --col-04:#b6e878;
+  font-size: 16px;
+}
+
+body{
+  padding: 1rem;
+  background-color: var(--col-02);
+  color: var(--col-01);
+  transition: color ease-in 1s;
+}
+
+a.hover {
+  animation: colorCycle 1s 1;
+}
+
+@keyframes colorCycle {
+  0% {
+    color: var(--col-01);
+  }
+
+  30% {
+    color: var(--col-04);
+    opacity: 75%;
+  }
+
+  100% {
+    color: var (--col-04);
+  }
+}
+
+section{
+  margin-bottom: 2rem;
+}
+
+h1{
+  font-size: 3rem;
+}
+
+h2{
+  font-size: 2rem;
+}
+
+p{
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+figcaption{
+  width: fit-content;
+}
+
+dl ul{
+  margin-bottom: 0;
+}
+
+li{
+  font-size: 1rem;
+}
+
+dd{
+  padding-left: 60px;
+}
+
+li ul{
+  padding-left: 40px;
+}
+
+.img-wrapper{
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.img-figure{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.article-img{
+  width: 80%;
+}
+
+.res-columns{
+  column-width: 25rem;
+}
+
+/* medium devices 600 - 992 */
+@media only screen and (min-width: 600px) {
+  :root{
+    font-size: 20px;
+  }
+  
+  .img-wrapper{
+    width: 75%;
+    margin: 1.5rem auto;
+  }
+}
+
+/*Keyframes application*/
+
+header:hover {
+  animation-duration: 1s;
+  animation-name: colorCycle;
+}
+
+ol:hover {
+  animation-duration: 1s; 
+  animation-name: fadeIn; 
+  animation-duration: 1s;
+}
+
+/* medium devices 992 + */
+@media only screen and (min-width: 992px) {
+  :root{
+    font-size: 24px;
+  }
+
+  .img-wrapper{
+    max-width: fit-content;
+    float: right;
+    margin: 1.5rem;
+  }
+}
+
+/*accessibility tag for people who dont like animation*/ 
+@media (prefers-reduced-motion: reduce) {
+    button {
+      background-color: var (--col-04);
+      animation: none;
+    }
+}
+
+/*Coding Notes: In this coding experiment, I used various animation transition speeds / colours and opacities to 
+see what would provide the best feedback. I ended up choosing shorter animations rather than long ones as I found, 
+on interaction, that long transitions were tedious in application. To trigger these animations, I decided on "hover". 
+The reason for this was that by "hovering" rather than clicking, the user can see that the navigation menu can be interacted
+with, without committing to clicking any of the links. 
+I used the JavaScript application to create a "dark mode" option with corresponding html button through "if" statements. On 
+attempting to do the same thing with an accessibility mode, I ran into some troubles with the coding application and understanding
+CSS vs javascript Boolean application. I will work on this further to distinguish how to use this mode.*/
