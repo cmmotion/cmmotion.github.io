@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+        <title>Chloe Rankin Final Assignment INT-MEDIA</title>
+    </head>
+</html>
+<!--The metaphor for my website is "the eyes of a cat" as presented in my speech. I did 
+change from my original design (as discussed in the CSS notes) as I felt being atop a desk 
+did more to indicate that the perspective was through the eyes - literally - of a cat.
+
+For the content of the buttons, I decided to implement a cat's personality rather than have the 
+buttons be generic in nature. I wanted the personality of a cat to shape the experience, with the ultimate
+goal of making the objects appear as they would to a cat rather than to a human.-->
+
+<!--"How would a cat want to interact with this object?"-->
+
+<!--Images that make up the desk. I will use Javascript & CSS to replace the image "onclick"-->
+<body>
+    <div class="the-title">
+        <h1>The human desk</h1>
+    </div>
+    <div class="sub-title">
+        <h2>...through the eyes of a cat!</h2>
+    </div>
+
+    <div class="wrapper">
+        <div>
+            <img id="pen-cup-before" src="img/pens-default.png">
+            <button onclick="myFunction2()" type="button" id="interact-pens">Dismantle</button>
+            <img id="pen-cup-after" src="img/pens-spilled-over.png" alt="spilled pens"> 
+        </div>
+        <div>
+            <img id="laptop-before" src="img/laptop-default.png">
+            <button onclick="myFunction3()" type="button" id="interact-laptop">Sabotage?</button> 
+            <img id="laptop-after" src="img/laptop-deleted.png" alt="laptop after interaction">
+        </div>
+        <div>
+            <img id="coffee-before" src="img/coffee-paper-default.png" alt="default coffee">
+            <button onclick="myFunction()" type="button" id="interact-coffee">Inspect?</button>
+            <img id="coffee-after" src="img/spilled-drink-1.png" alt="spilled-coffee">
+        </div>
+        <div>
+            <img id="pen-before" src="img/ipad-before.png">
+            <button onclick="myFunction1()" onclick="playAudio(snd/cat-purr.mp3)" type="button" id="interact-w-pen">Create art?</button>
+            <img id="pen-after" src="img/ipad-after.png">
+        </div>
+    </div>
+
+    <div id="purr-pause">
+        <input type="button" id="purr-button" value="speak!" src="/snd/cat-purr.mp3" onclick="audio.play()">
+        <input type="button" id="purr-stop" value="shhh" src="/snd/cat-purr.mp3" onclick="audio.pause()">
+    </div>
+    
+    <div id="copyright">
+        <p>(C)Youtube Audio Library</p>
+    </div>
+    
+
+   
+</body>
